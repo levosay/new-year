@@ -54,4 +54,31 @@ body {
   width: 100%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  opacity: 0.9;
+}
+
+#myVideo {
+  position: fixed;
+  width: 3200px;
+}
+
+.time-wrapper {
+  width: 70px;
+  height: 70px;
+}
+.time-wrapper--item {
+  font-size: 90px;
+}
+.time-wrapper--desc {
+  padding-top: 20px;
+  font-size: 44px;
+}
+
 /*# sourceMappingURL=App.css.map */
