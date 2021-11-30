@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './App.css'
+import coverVid from './video/video-bcg.mp4'
 
 const App = () => {
   const [days, setDays] = useState()
@@ -32,7 +33,7 @@ const App = () => {
   return (
     <div className="App">
       <video autoPlay muted loop id="myVideo">
-        <source src="https://vod-progressive.akamaized.net/exp=1638204112~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3353%2F25%2F641767478%2F2942165542.mp4~hmac=8a136101f1fa83dcce3540fe5ac119b5b760c1ef062ecf940bec700d8d95575f/vimeo-prod-skyfire-std-us/01/3353/25/641767478/2942165542.mp4?filename=Trees+-+93826.mp4" type="video/mp4" />
+        <source src={coverVid} type="video/mp4"/>
       </video>
       <div className="container">
         <div className="time-wrapper">
