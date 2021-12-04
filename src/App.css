@@ -13,6 +13,7 @@ body {
 }
 
 .App {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,7 @@ body {
   align-items: center;
   width: 600px;
   height: 200px;
+  margin: 0 20px;
   background: #32283b;
   border-radius: 10px;
   box-shadow: 0 0 10px 5px #dddddd;
@@ -49,16 +51,44 @@ body {
   color: #fec2eb;
 }
 
-#myVideo {
-  position: fixed;
+.background-img {
+  display: none;
+}
+
+.video-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.video__block {
   width: 100%;
 }
 
-@media (max-width: 430px) {
-  .App {
-    height: 100vh;
+@media (max-width: 1600px) {
+  .video__block {
+    width: 120%;
   }
-
+}
+@media (max-width: 1200px) {
+  .video__block {
+    width: 180%;
+  }
+}
+@media (max-width: 991px) {
+  .video__block {
+    width: 260%;
+  }
+}
+@media (max-width: 767px) {
+  .video__block {
+    width: 310%;
+  }
+}
+@media (max-width: 479px) {
   .container {
     flex-direction: column;
     justify-content: space-around;
@@ -67,21 +97,25 @@ body {
     opacity: 0.9;
   }
 
-  #myVideo {
-    position: fixed;
-    width: 3200px;
+  .video__block {
+    display: none;
   }
 
   .time-wrapper {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .time-wrapper--item {
-    font-size: 90px;
+    font-size: 60px;
   }
   .time-wrapper--desc {
-    padding-top: 20px;
-    font-size: 44px;
+    padding-top: 0;
+    font-size: 29px;
+  }
+
+  .background-img {
+    display: block;
+    width: 300%;
   }
 }
 

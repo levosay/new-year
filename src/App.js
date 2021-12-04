@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './App.css'
 import coverVid from './video/video-bcg.mp4'
+import coverImg from './img/background-mobile1.png'
 
 const App = () => {
   const [days, setDays] = useState()
@@ -32,9 +33,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <video autoPlay muted loop id="myVideo">
-        <source src={coverVid} type="video/mp4"/>
-      </video>
+      <div className="video-wrapper">
+        <img className="background-img" src={coverImg} alt="background"/>
+        <video autoPlay muted loop className="video__block">
+          <source src={coverVid} type="video/mp4"/>
+        </video>
+      </div>
       <div className="container">
         <div className="time-wrapper">
           <div className="time-wrapper--item">{days}</div>
