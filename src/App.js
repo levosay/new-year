@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './App.css'
 import coverVid from './video/video-bcg.mp4'
 import coverImg from './img/background-mobile1.png'
@@ -19,7 +19,7 @@ const App = () => {
 
   function getTime () {
     const now = new Date()
-    const newYear = new Date('Jan 1 2022 00:00:00')
+    const newYear = new Date('Jan 1 2023 00:00:00')
     setDays(Math.floor((newYear - now) / 1000 / 60 / 60 / 24))
     setHours(Math.floor((newYear - now) / 1000 / 60 / 60 % 24))
     setMinutes(Math.floor((newYear - now) / 1000 / 60 % 60))
@@ -35,7 +35,7 @@ const App = () => {
     <div className="App">
       <div className="video-wrapper">
         <img className="background-img" src={coverImg} alt="background"/>
-        <video autoPlay muted loop className="video__block">
+        <video autoPlay loop className="video__block">
           <source src={coverVid} type="video/mp4"/>
         </video>
       </div>
