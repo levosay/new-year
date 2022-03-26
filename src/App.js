@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.css'
 import coverVid from './video/video-bcg.mp4'
 import coverImg from './img/background-mobile1.png'
@@ -35,7 +35,7 @@ const App = () => {
     <div className="App">
       <div className="video-wrapper">
         <img className="background-img" src={coverImg} alt="background"/>
-        <video autoPlay loop className="video__block">
+        <video autoPlay muted loop className="video__block">
           <source src={coverVid} type="video/mp4"/>
         </video>
       </div>
